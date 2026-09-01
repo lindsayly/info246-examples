@@ -8,7 +8,7 @@
     <?php
       $fName = $_POST['firstName'];
       $color = $_POST['eyeColor'];
-      if($fname == 'Steve'){
+      if($fName == 'Steve'){
         print("<p>You are the teacher</p>");
         if($color == 'blue'){
           print("<p>. \nHi, blue eyes!</p>");
