@@ -6,7 +6,7 @@
     <body>
         <h3>Guess the number</h3>
         <?php
-            $num = $_POST['$num'];
+            $num = $_POST['num'];
             if(empty($num)) {
                 print("Field is blank: Enter an integer between 1-100.");
             } else {
