@@ -13,10 +13,10 @@
                 if(!is_numeric($num)) {
                     print("Not numeric: Enter an integer between 1-100.");
                 }
-                if($num < 1 || $num > 100) {
+                elseif($num < 1 || $num > 100) {
                     print("Out of range: Enter an integer between 1-100.");
                 }
-                if($num == 17) {
+                elseif($num == 17) {
                     print("That's the number I was thinking of!");
                 } else {
                     print("Nope. That's not it.");
