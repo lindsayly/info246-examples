@@ -4,7 +4,7 @@
     <title>Using OR</title>
   </head>
   <body>
-    <h3>Apples or Pears</h3>
+    <h3>Guess the number</h3>
     <?php
       $num = $_POST['num'];
       if ($num != 7) {
