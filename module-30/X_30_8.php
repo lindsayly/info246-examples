@@ -15,5 +15,6 @@
       } else {
         print("You have the same number of apples and pears.");
       }
+    ?>
   </body>
 </html>
