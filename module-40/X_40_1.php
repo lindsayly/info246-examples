@@ -10,10 +10,11 @@
       for($i = 1; $i <= 7; $i++){
         $itemHtmlName = "item$i";
         $listItem = $_POST[$itemHtmlName];
-        if($listItem == ""){
+        if($listItem != ""){
+          print("<li>$listItem</li>");
+        } else {
           $i++;
         }
-        print("<li>$listItem</li>");
       }
     ?>
     </ul>
