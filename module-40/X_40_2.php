@@ -12,8 +12,10 @@
       while(!empty($city)){
         $cityHtmlName = "city$counter";
         $city = $_POST[$cityHtmlName];
-        print("<li>$city</li>");
-        $counter++;
+        if(!empty($city)){
+          print("<li>$city</li>");
+          $counter++;
+        }
       }
     ?>
     </ul>
