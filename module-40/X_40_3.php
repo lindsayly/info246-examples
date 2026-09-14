@@ -15,7 +15,7 @@
     		{
     			$line = fgets($fp);  //Reads one line from the file
     			$playerName = trim($line);
-          print("$playerName");
+          print("<li>$playerName</li>");
     		}
         fclose($fp);
       ?>
