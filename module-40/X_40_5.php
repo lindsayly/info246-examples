@@ -47,7 +47,7 @@
             break;
           }
           $lineColorCount = $lineCount % 2;
-          if ($lineColorCount == 0 {
+          if ($lineColorCount == 0) {
         		$style = "style='background-color: #FFFFCC;'";
         	} else {
         		$style = "style='background-color: white;'";
