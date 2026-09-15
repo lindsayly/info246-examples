@@ -19,6 +19,7 @@
         }
         //appending pet to output
         $output .= $pet.'|';
+        $counter++;
       }
       //appending newline
       $output .= "\n";
