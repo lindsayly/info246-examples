@@ -13,13 +13,13 @@
       while($counter < 4) {
         $petHtml = "pet$counter";
         $pet = $_POST[$petHtml];
-        //breaking out of while loop if no pet entered
+	      //set to empty string if no pet entered
         if(empty($pet)){
-          break;
+          $pet = "";
         }
         //appending pet to output
         $output .= $pet.'|';
-        $counter++;
+	      $counter++;
       }
       //appending newline
       $output .= "\n";
@@ -55,12 +55,12 @@
         	}
           list($fname, $lname, $pet1, $pet2, $pet3) = explode('|', $currLine);
           $display .= "<tr $style>";
-      		$display .= "<td>".$fname."</td>";
-      		$display .= "<td>".$lname."</td>";
+      	  $display .= "<td>".$fname."</td>";
+      	  $display .= "<td>".$lname."</td>";
           $display .= "<td>".$pet1."</td>";
           $display .= "<td>".$pet2."</td>";
           $display .= "<td>".$pet3."</td>";
-        	$display .= "</tr>\n";  //added newline
+          $display .= "</tr>\n";
           $lineCount++;
         }
         fclose($fp);
