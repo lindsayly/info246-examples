@@ -18,8 +18,18 @@
   			padding: 10px;
   		}
   	</style>
+    <script>
+      function colorChange(){
+        var div = document.getElementById("container");
+        div.style.color = "saddlebrown";  			
+  			var p1 = document.getElementById("mypara1");
+        p1.style.color = palegoldenrod;
+        var p2 = document.getElementById("mypara2");
+        p2.style.color = palegoldenrod;
+      }
+    </script>
   </head>
-  <body>
+  <body onload="colorChange();">
   	<div id="container">
   		<header>
   			<h1 class="headcolor">Exercise 1</h1>
