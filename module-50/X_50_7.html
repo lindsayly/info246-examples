@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Adding a Class</title>
+    <style>
+      .dazzle {
+        color: red;
+        font-size: 3em;
+      }
+    </style>
+    <script>
+      var $ = function(id) {
+        return document.getElementById(id);
+      }
+      var addClass = function() {
+        $("para").setAttribute("class", "dazzle");
+      }
+      window.onload = function() {
+        $("button").onclick = addClass;
+    </script>
+  </head>
+  <body>
+    <h2>Adding a Class</h2>
+    <p id="para">Let's Razzle-Dazzle Them!</p>
+    <input type="button" id="button" value="Dazzle Me">
+  </body>
+</html>
