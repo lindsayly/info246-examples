@@ -27,5 +27,5 @@ var displayMessage = function() {
 }
 
 window.onload = function() {
-  $("output").onclick = displayMessage;
+  $("submit").onclick = displayMessage;
 }
