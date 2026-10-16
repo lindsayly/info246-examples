@@ -12,9 +12,9 @@ var displayMessage = function() {
   if(age < 40) {
     var out = "Keep working " + fname + "! It's too early to reture.";
   }
-  $("msg").innerHTML = out;
+  $("output").innerHTML = out;
 }
 
 window.onload = function() {
-  $("displayButton").onclick = displayMessage;
+  $("submit").onclick = displayMessage;
 }
