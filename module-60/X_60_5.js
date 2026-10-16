@@ -19,7 +19,7 @@ var displayMessage = function() {
     if (age > 18 && age < 65) {
       var out = fname + ", you are in your prime working years.";
     }
-    if (age <= 65) {
+    if (age >= 65) {
       var out = fname + ", it is time to retire.";
     }
   }
