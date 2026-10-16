@@ -10,7 +10,7 @@ var displayMessage = function() {
     var out = fname + " you are over 40! It's time for that over-the-hill party";
   }
   if(age < 40) {
-    var out = "Keep working " + fname + "! It's too early to reture.";
+    var out = "Keep working " + fname + "! It's too early to retire.";
   }
   $("output").innerHTML = out;
 }
