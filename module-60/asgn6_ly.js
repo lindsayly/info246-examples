@@ -12,14 +12,20 @@ function processInfo() {
   if(fname == "") {
     $("firstname_error").innerHTML = "Please enter your first name";
     $("message").innerHTML = "";
+  } else {
+    $("firstname_error").innerHTML = "";
   }
   if(lname == "") {
     $("lastname_error").innerHTML = "Please enter your last name";
     $("message").innerHTML = "";
+  } else {
+    $("lastname_error").innerHTML = "";
   }
   if(numPets < 0 || numPets > 3 || numPets.length == 0) {
     $("numpets_error").innerHTML = "Please enter a number 0-3";
     $("message").innerHTML = "";
+  } else {
+    $("numpets_error").innerHTML = "";
   }
   if(fname != "" && lname != "" && numPets >= 0 && numPets <=3){
     var name = lname + ", " + fname;
