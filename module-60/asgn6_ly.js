@@ -27,7 +27,7 @@ function processInfo() {
   } else {
     $("numpets_error").innerHTML = "";
   }
-  if(fname != "" && lname != "" && numPets >= 0 && numPets <=3){
+  if(fname != "" && lname != "" && numPets >= 0 && numPets <=3 && numPets.length != 0){
     var name = lname + ", " + fname;
 
     var today = new Date();
