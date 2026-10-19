@@ -7,6 +7,8 @@ function processInfo() {
   var lname = $("lastname").value;
   var numPets = $("numpets").value;
 
+  var out = "";
+
   if(fname == "") {
     $("firstname_error").innerHTML = "Please enter your first name";
   }
@@ -24,7 +26,7 @@ function processInfo() {
     var day = today.getDate();
     var year = today.getYear();
 
-    var out = "Your name is listed as " + name + " and today's date is " + month + "-" + day + "-" + year + ". ";
+    out = "Your name is listed as " + name + " and today's date is " + month + "-" + day + "-" + year + ". ";
 
     for(var i = 1; i < 4; i++){
       var petNumber = "pet" + i;
@@ -35,8 +37,8 @@ function processInfo() {
         out += "Your Pet #" + i + " is named " + petName + ". ";
       }
     }
+    $("message").innerHTML = out;
   }
-  $("message").innerHTML = out;
 }
 
 window.onload = function() {
