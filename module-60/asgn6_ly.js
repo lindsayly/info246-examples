@@ -33,7 +33,7 @@ function processInfo() {
     var today = new Date();
     var month = today.getMonth();
     var day = today.getDate();
-    var year = today.getYear();
+    var year = today.getFullYear();
 
     out = "Your name is listed as " + name + " and today's date is " + month + "-" + day + "-" + year + ". ";
 
