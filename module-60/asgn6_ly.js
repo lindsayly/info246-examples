@@ -3,9 +3,9 @@ var $ = function(id) {
 }
 
 function processInfo() {
-  var fname = $("firstname");
-  var lname = $("lastname");
-  var numPets = $("numpets");
+  var fname = $("firstname").value;
+  var lname = $("lastname").value;
+  var numPets = $("numpets").value;
 
   if(fname == "") {
     $("firstname_error").innerHTML = "Please enter your first name";
@@ -18,7 +18,6 @@ function processInfo() {
   }
 
   var name = lname + ", " + fname;
-  console.log(name);
 
   var today = new Date();
   var month = today.getMonth();
