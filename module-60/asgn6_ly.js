@@ -37,7 +37,7 @@ function processInfo() {
 
     out = "Your name is listed as " + name + " and today's date is " + month + "-" + day + "-" + year + ". ";
 
-    for(var i = 1; i < numPets; i++){
+    for(var i = 1; i <= numPets; i++){
       var petNumber = "pet" + i;
       var petName = $(petNumber).value;
       if(petName == ""){
