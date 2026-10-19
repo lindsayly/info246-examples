@@ -16,23 +16,24 @@ function processInfo() {
   if(numPets < 0 || numPets > 3 || numPets.length == 0) {
     $("numpets_error").innerHTML = "Please enter a number 0-3";
   }
+  if(fname != "" && lname != "" && numPets >= 0 && numPets <=3){
+    var name = lname + ", " + fname;
 
-  var name = lname + ", " + fname;
+    var today = new Date();
+    var month = today.getMonth();
+    var day = today.getDate();
+    var year = today.getYear();
 
-  var today = new Date();
-  var month = today.getMonth();
-  var day = today.getDate();
-  var year = today.getYear();
+    var out = "Your name is listed as " + name + " and today's date is " + month + "-" + day + "-" + year + ". ";
 
-  var out = "Your name is listed as " + name + " and today's date is " + month + "-" + day + "-" + year + ". ";
-
-  for(var i = 1; i < 4; i++){
-    var petNumber = "pet" + i;
-    var petName = $(petNumber).value;
-    if(petName == ""){
-      i = 4;
-    } else {
-      out += "Your Pet #" + i + " is named " + petName + ". ";
+    for(var i = 1; i < 4; i++){
+      var petNumber = "pet" + i;
+      var petName = $(petNumber).value;
+      if(petName == ""){
+        i = 4;
+      } else {
+        out += "Your Pet #" + i + " is named " + petName + ". ";
+      }
     }
   }
   $("message").innerHTML = out;
