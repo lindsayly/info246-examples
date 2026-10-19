@@ -7,21 +7,18 @@ function processInfo() {
   var lname = $("lastname");
   var numPets = $("numpets");
 
-  var fnameError = $("firstname_error");
-  var lnameError = $("lastname_error");
-  var numPetsError = $("numpets_error");
-
   if(fname == "") {
-    fnameError.innerHTML = "Please enter your first name";
+    $("firstname_error").innerHTML = "Please enter your first name";
   }
   if(lname == "") {
-    lnameError.innerHTML = "Please enter your last name";
+    $("lastname_error").innerHTML = "Please enter your last name";
   }
   if(numPets < 0 || numPets > 3 || numPets.length == 0) {
-    numPetsError.innerHTML = "Please enter a number 0-3";
+    $("numpets_error").innerHTML = "Please enter a number 0-3";
   }
 
   var name = lname + ", " + fname;
+  console.log(name);
 
   var today = new Date();
   var month = today.getMonth();
