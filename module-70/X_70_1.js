@@ -6,7 +6,9 @@ var input = "";
 
 var findCity = function() {
   input = $(city);
+  console.log(input);
   var cityList = $(cityList);
+  console.log(cityList);
   if(cityList.includes(input)){
     $(msg).innerHTML = input + "was found in the city list!";
   } else {
