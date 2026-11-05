@@ -5,9 +5,9 @@ var $ = function(id) {
 var input = "";
 
 var findCity = function() {
-  input = $(city).value;
+  input = $("city").value;
   var inputLower = input.toLowerCase();
-  var cityList = $(cityList).value;
+  var cityList = $("cityList").value;
   var cityListLower = cityList.toLowerCase();
   if(cityListLower.includes(inputLower)){
     $(msg).innerHTML = input + "was found in the city list!";
