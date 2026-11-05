@@ -17,5 +17,5 @@ var findCity = function() {
 }
 
 window.onload = function() {
-  $(searchButton).onclick = findCity;
+  $("searchButton").onclick = findCity;
 }
