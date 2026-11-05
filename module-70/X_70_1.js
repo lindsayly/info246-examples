@@ -5,11 +5,13 @@ var $ = function(id) {
 var input = "";
 
 var findCity = function() {
-  input = $(city);
+  input = $(city).value;
+  var inputLower = input.toLowerCase();
   console.log(input);
-  var cityList = $(cityList);
+  var cityList = $(cityList).value;
+  var cityListLower = cityList.toLowerCase();
   console.log(cityList);
-  if(cityList.includes(input)){
+  if(cityListLower.includes(inputLower)){
     $(msg).innerHTML = input + "was found in the city list!";
   } else {
     $(msg).innerHTML = input + "was NOT found in the city list!";
