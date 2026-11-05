@@ -5,6 +5,7 @@ var $ = function(id) {
 var input = "";
 
 var findCity = function() {
+  console.log("begin function");
   input = $(city).value;
   var inputLower = input.toLowerCase();
   console.log(input);
