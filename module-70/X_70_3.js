@@ -4,18 +4,18 @@ var $ = function(id) {
 
 var displayImg = function() {
   var gender = $("gender").value;
-  if(gender == "None"){
+  if(gender == "none"){
     $("myimg").style = "display: none;";
   }
-  if(gender == "Male"){
+  if(gender == "male"){
     $("myimg").style = "display: block;";
     $("myimg").src = "http://profperry.com/testimages/male.jpg";
   }
-  if(gender == "Female"){
+  if(gender == "female"){
     $("myimg").style = "display: block;";
     $("myimg").src = "http://profperry.com/testimages/female.jpg";
   }
-  if(gender == "Droid"){
+  if(gender == "droid"){
     $("myimg").style = "display: block;";
     $("myimg").src = "http://profperry.com/testimages/droid.jpg";
   }
