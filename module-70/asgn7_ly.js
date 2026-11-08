@@ -83,7 +83,7 @@ function addPatron() {
 }
 
 window.onload = function() {
-  $("clearfields").onclick = $("myform").reset();
+  $("clearfields").onclick = clear;
   $("addpatron").onclick = addPatron;
   $("firstname").focus();
 }
