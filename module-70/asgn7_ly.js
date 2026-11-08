@@ -73,13 +73,16 @@ function validateItems() {
   if(fnameValid && lnameValid && emailValid && cityValid && donoValid) {
     return true;
   } else {
-    $("endmessage").innerHTML = "Patron Not Added";
     return false;
   }
 }
 
 function addPatron() {
   var isValid = validateItems();
+  if(isValid) {
+    $("myform").submit();
+  } else {
+    $("endmessage").innerHTML = "Patron Not Added!";
 }
 
 window.onload = function() {
