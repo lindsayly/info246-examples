@@ -51,11 +51,12 @@ function validateItems() {
   }
 }
 
-function addPatrons() {
+function addPatron() {
   var isValid = validateItems();
 }
 
 window.onload = function() {
   $("clearfields").onclick = $("myform").reset();
+  $("addpatron").onclick = addPatron;
   $("firstname").focus();
 }
