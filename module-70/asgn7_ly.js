@@ -2,8 +2,6 @@ var $ = function(id) {
   return document.getElementById(id);
 }
 
-
-
 function validateItems() {
   var fname = $("firstname").value;
   var lname = $("lastname").value;
@@ -58,6 +56,6 @@ function addPatrons() {
 }
 
 window.onload = function() {
-  $("clearfields").onclick = form.reset();
+  $("clearfields").onclick = $("myform").reset();
   $("firstname").focus();
 }
