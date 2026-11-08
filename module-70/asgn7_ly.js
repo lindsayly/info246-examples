@@ -83,6 +83,7 @@ function addPatron() {
     $("myform").submit();
   } else {
     $("endmessage").innerHTML = "Patron Not Added!";
+  }
 }
 
 window.onload = function() {
