@@ -3,11 +3,20 @@ var $ = function(id) {
 }
 
 function clear() {
+  //sets values to empty string to clear
   $("firstname").value = "";
   $("lastname").value = "";
   $("email").value = "";
   $("city").value = "-";
   $("donation").value = "";
+
+  //resets error message to empty
+  $("firstnameerror").innerHTML = "";
+  $("lastnameerror").innerHTML = "";
+  $("emailerror").innerHTML = "";
+  $("cityerror").innerHTML = "";
+  $("donationerror").innerHTML = "";
+  $("endmessage").innerHTML = "";
 } 
 
 function validateItems() {
