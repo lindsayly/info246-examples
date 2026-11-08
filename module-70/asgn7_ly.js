@@ -3,50 +3,60 @@ var $ = function(id) {
 }
 
 function validateItems() {
+  //getting field values
   var fname = $("firstname").value;
   var lname = $("lastname").value;
   var email = $("email").value;
   var city = $("city").value;
   var donation = $("donation").value;
-  
-  var fnameError = $("firstnameerror").innerHTML;
-  var lnameError = $("lastnameerror").innerHTML;
-  var emailError = $("emailerror").innerHTML;
-  var cityError = $("cityerror").innerHTML;
-  var donoError = $("donationerror").innerHTML;
-  var endmsg = $("endmessage").innerHTML;
+
+  //booleans for field validity
+  var fnameValid = true;
+  var lnameValid = true;
+  var emailValid = true;
+  var cityValid = true;
+  var donoValid = true;
 
   //defaults error message to empty
-  fnameError = "";
-  lnameError = "";
-  emailError = "";
-  cityError = "";
-  donoError = "";
-  endmsg = "";
+  $("firstnameerror").innerHTML = "";
+  $("lastnameerror").innerHTML = "";
+  $("emailerror").innerHTML = "";
+  $("cityerror").innerHTML = "";
+  $("donationerror").innerHTML = "";
+  $("endmessage").innerHTML = "";
 
   //adds in error messages if fields are empty
+  //sets booleans to false
   if(fname == "") {
-    fnameError = "Enter First Name";
+    $("firstnameerror").innerHTML = "Enter First Name";
+    fnameValid = false;
   }
   if(lname == "") {
-    lnameError = "Enter Last Name";
+    $("lastnameerror").innerHTML = "Enter Last Name";
+    lnameValid = false;
   }
   if(email == "") {
-    emailError = "Enter Email";
+    $("emailerror").innerHTML = "Enter Email";
+    emailValid = false;
   }
   if(city == "-") {
-    cityError = "Select a City from the list";
+    $("cityerror").innerHTML = "Select a City from the list";
+    cityValid = false;
   }
   if(donation == "") {
-    donoError = "Enter Donation Amount";
+    $("donationerror").innerHTML = "Enter Donation Amount";
+    donoValid = false;
   }
   if(isNaN(donation)) {
-    donoError = "Amount must be numeric";
+    $("donationerror").innerHTML = "Amount must be numeric";
+    donoValid = false;
   }
-  
-  if(fnameError != "" && lnameError != "" && emailError != "" && cityError != "" && donoError != "") {
+
+  //checking booleans
+  if(fnameValid && lnameValid && emailValid && cityValid && donoValid) {
     return true;
   } else {
+    $("endmessage").innerHTML = "Patron Not Added";
     return false;
   }
 }
