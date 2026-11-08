@@ -2,14 +2,14 @@ var $ = function(id) {
   return document.getElementById(id);
 }
 
-function validateItems() {
-  //getting field values
-  var fname = $("firstname").value;
-  var lname = $("lastname").value;
-  var email = $("email").value;
-  var city = $("city").value;
-  var donation = $("donation").value;
+//getting field values as global variables
+var fname = $("firstname").value;
+var lname = $("lastname").value;
+var email = $("email").value;
+var city = $("city").value;
+var donation = $("donation").value;
 
+function validateItems() {
   //booleans for field validity
   var fnameValid = true;
   var lnameValid = true;
@@ -64,6 +64,14 @@ function validateItems() {
 function addPatron() {
   var isValid = validateItems();
 }
+
+function clear() {
+  fname.value = "";
+  lname.value = "";
+  email.value = "";
+  city.value = "-";
+  donation.value = "";
+} 
 
 window.onload = function() {
   $("clearfields").onclick = $("myform").reset();
