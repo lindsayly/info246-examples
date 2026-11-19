@@ -35,7 +35,7 @@
       $code = $_POST['code'] ?? '';
       $fname = $_POST['fname'] ?? '';
     ?>
-    <form method="post" name="joinForm" id="joinForm" action="<?php echo htmlsspecialchars($_SERVER['PHP_SELF']); ?>">
+    <form method="post" name="joinForm" id="joinForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
       <p>Secret Code:<br>
       <input type="text" name="code" id="code" size="20" value="<?php echo $code ?>">
       <span style="color:red;" id="codeError"></span></p>
