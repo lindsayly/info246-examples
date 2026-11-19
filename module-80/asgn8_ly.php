@@ -44,10 +44,11 @@
       <span style="color:red;" id="fnameError"></span></p>
       <br>
       <input type="button" id="joinButton" value="Join Now">
-      <p><span id="msg"></span></p>
       
       <?php
-        
+        if($code == "747") {
+          print("You are now a member of the club!");
+        }
       ?>
     </form>
   </body>
