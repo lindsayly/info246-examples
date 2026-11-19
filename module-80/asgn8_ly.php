@@ -44,7 +44,10 @@
       <input type="text" name="code" id="code" size="20" value="<?php echo $code ?>">
       <span id="codeError"></span>
       <?php
-        if($code != "747") {
+        if($code == "") {
+          print("");
+        }
+        if($code != "" && $code != "747") {
           print("The secret code is incorrect! Try again.");
         }
       ?>
