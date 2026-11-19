@@ -22,7 +22,7 @@
           $("fnameError").innerHTML = "Please enter your first name";
           return false;
         } else {
-          $("fnameError").innerHTML = "":
+          $("fnameError").innerHTML = "";
         }
 
         //submits form if fields not empty
