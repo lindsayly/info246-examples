@@ -14,13 +14,11 @@
         //checks for empty fields
         if(code == "") {
           $("codeError").innerHTML = "Please enter the secret code";
-          return false;
         } else {
           $("codeError").innerHTML = "";
         }
         if(fname == "") {
           $("fnameError").innerHTML = "Please enter your first name";
-          return false;
         } else {
           $("fnameError").innerHTML = "";
         }
