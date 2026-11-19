@@ -38,10 +38,10 @@
     <form method="post" name="joinForm" id="joinForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
       <p>Secret Code:<br>
       <input type="text" name="code" id="code" size="20" value="<?php echo $code ?>">
-      <span style="color:red;" id="codeError"></span></p>
+      <span id="codeError"></span></p>
       <p>First Name:<br>
       <input type="text" name="fname" id="fname" size="20" value="<?php echo $fname ?>">
-      <span style="color:red;" id="fnameError"></span></p>
+      <span id="fnameError"></span></p>
       <br>
       <input type="button" id="joinButton" value="Join Now">
       
