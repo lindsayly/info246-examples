@@ -7,19 +7,48 @@
       var $ = function(id) {
         return document.getElementById(id);
       }
+      function validateForm() {
+        var code = $("code").value;
+        var fname = $("fname").value;
+
+        //checks for empty fields
+        if(code == "") {
+          $("codeError").innerHTML = "Please enter the secret code";
+          return false;
+        }
+        if(fname == "") {
+          $("fnameError").innerHTML = "Please enter your first name";
+          return false;
+        }
+
+        //submits form if fields not empty
+        $("joinForm").submit();
+      }
+      window.onload = function() {
+        $("joinButton").onclick = validateForm;
+      }
     </script>
   </head>
   <body>
     <h2>Join the Club!</h2>
-    <form method="post" name="joinForm" id="joinForm" action="<?php exho>
+    <?php
+      $code = $_POST['code'] ?? '';
+      $fname = $_POST['fname'] ?? '';
+    ?>
+    <form method="post" name="joinForm" id="joinForm" action="<?php echo htmlsspecialchars($_SERVER['PHP_SELF']); ?>">
       <p>Secret Code:<br>
-      <input type="text" id="code" size="20">
-      <span style="color:red;" id="codeError">placeholder</span></p>
+      <input type="text" name="code" id="code" size="20" value="<?php echo $code ?>">
+      <span style="color:red;" id="codeError"></span></p>
       <p>First Name:<br>
-      <input type="text" id="name" size="20">
-      <span style="color:red;" id="nameError">placeholder</span></p>
+      <input type="text" name="fname" id="fname" size="20" value="<?php echo $fname ?>">
+      <span style="color:red;" id="fnameError"></span></p>
       <br>
       <input type="button" id="joinButton" value="Join Now">
+      <p><span id="msg"></span></p>
+      
+      <?php
+        
+      ?>
     </form>
   </body>
 </html>
