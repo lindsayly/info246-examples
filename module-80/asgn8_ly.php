@@ -24,6 +24,7 @@
         } else {
           $("fnameError").innerHTML = "";
         }
+        if(code == "" || fname == "") { return false; }
 
         //submits form if fields not empty
         $("joinForm").submit();
