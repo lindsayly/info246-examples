@@ -15,10 +15,14 @@
         if(code == "") {
           $("codeError").innerHTML = "Please enter the secret code";
           return false;
+        } else {
+          $("codeError").innerHTML = "";
         }
         if(fname == "") {
           $("fnameError").innerHTML = "Please enter your first name";
           return false;
+        } else {
+          $("fnameError").innerHTML = "":
         }
 
         //submits form if fields not empty
@@ -38,7 +42,13 @@
     <form method="post" name="joinForm" id="joinForm" action="<?php echo $_SERVER['PHP_SELF']; ?>">
       <p>Secret Code:<br>
       <input type="text" name="code" id="code" size="20" value="<?php echo $code ?>">
-      <span id="codeError"></span></p>
+      <span id="codeError"></span>
+      <?php
+        if($code != "747") {
+          print("The secret code is incorrect! Try again.");
+        }
+      ?>
+      </p>
       <p>First Name:<br>
       <input type="text" name="fname" id="fname" size="20" value="<?php echo $fname ?>">
       <span id="fnameError"></span></p>
